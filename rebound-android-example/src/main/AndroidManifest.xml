@@ -5,7 +5,7 @@
   android:versionCode="1"
   android:versionName="1.0">
   <uses-sdk android:targetSdkVersion="19"
-            android:minSdkVersion="14"/>
+            android:minSdkVersion="16"/>
   <application
     android:label="Rebound Example"
     android:hardwareAccelerated="true"

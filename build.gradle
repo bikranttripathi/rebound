@@ -1,11 +1,19 @@
 buildscript {
-  repositories {
-    mavenCentral()
-  }
+    repositories {
+        google()
+        jcenter()
+    }
 
-  dependencies {
-    classpath 'com.android.tools.build:gradle:1.2.3'
-  }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+    }
 }
 
 apply plugin: 'com.android.library'
@@ -14,10 +22,9 @@ import com.android.builder.core.BuilderConstants
 android {
 
   compileSdkVersion Integer.parseInt(project.ANDROID_COMPILE_SDK_VERSION)
-  buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
   defaultConfig {
-    minSdkVersion 11
+    minSdkVersion 16
     targetSdkVersion Integer.parseInt(project.ANDROID_TARGET_SDK_VERSION)
   }
 
